@@ -1,15 +1,33 @@
-.text-container {
-  height: 200vh; /* Enough scroll space */
+.container {
+  height: 200vh; /* Enough space for scrolling */
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.scroll-text {
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* Creates 3D effect */
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  transform: rotateX(0deg); /* Initial rotation */
+}
+
+.text-wrapper h1 {
   font-size: 4rem;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  margin: 50px 0;
+  line-height: 8rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  transform: rotateX(60deg); /* Adjust rotation for cylindrical effect */
+}
+
+.text-wrapper h1:nth-child(even) {
+  opacity: 0.6; /* Dim some texts for depth effect */
+}
+
+.text-wrapper h1:nth-child(odd) {
+  opacity: 0.9;
 }
