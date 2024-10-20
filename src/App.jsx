@@ -1,10 +1,11 @@
-import RotatingText from './components/RotatingText';
 import './App.css';
+import VerticalTextScroll from './components/VerticalTextScroll';
+
 
 function App() {
   return (
     <div className="App">
-      <RotatingText />
+      <VerticalTextScroll />
     </div>
   );
 }

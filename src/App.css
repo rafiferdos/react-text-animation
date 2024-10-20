@@ -1,33 +1,23 @@
-.container {
-  height: 200vh; /* Enough space for scrolling */
+.gallery {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  background-color: #e3e6e9;
 }
 
-.text-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  perspective: 1000px; /* Creates 3D effect */
-  transform-style: preserve-3d;
-  transform-origin: center center;
-  transform: rotateX(0deg); /* Initial rotation */
+.text-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
-.text-wrapper h1 {
-  font-size: 4rem;
-  line-height: 8rem;
-  opacity: 0.8;
-  text-transform: uppercase;
-  transform: rotateX(60deg); /* Adjust rotation for cylindrical effect */
-}
-
-.text-wrapper h1:nth-child(even) {
-  opacity: 0.6; /* Dim some texts for depth effect */
-}
-
-.text-wrapper h1:nth-child(odd) {
-  opacity: 0.9;
+.text-item {
+  font-size: 3rem;
+  color: #333;
+  opacity: 0;
+  transform: translateY(100%);
+  white-space: nowrap;
 }
